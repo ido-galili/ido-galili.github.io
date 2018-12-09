@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./colorBlocks.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <title>Color Blocks Game</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 pt-5">
+                <div id="game-title" class="jumbotron">
+                    <h1 class="display-4">Color Blocks Game!</h1>
+                </div>
+            </div>
+            <div class="col-lg-9 pt-5">
+                <form>
+                    <div class="form-group">
+                        <select name="form-control" id="selectBox" class="mb-2">
+                            <option>Pick a Box!</option>
+                        </select>
+                        <button type="button" class="btn btn-md btn-danger" onclick="deleteBox(selectBox.value)"><i
+                                class="far fa-trash-alt"></i></button>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-lg btn-primary mb-2" onclick="createBox('blue')">Blue</button>
+                        <button type="button" class="btn btn-lg btn-danger mb-2" onclick="createBox('red')">Red</button>
+                        <button type="button" class="btn btn-lg btn-success mb-2" onclick="createBox('green')">Green</button>
+                        <button type="button" class="btn btn-lg btn-warning mb-2" onclick="createBox('yellow')">Yellow</button>
+                    </div>
+                </form>
+                <hr>
+                <div id="showBoxesDiv" class="row cardsRow"></div>
+            </div>
+        </div>
+    </div>
+        
+    <script src="./colorBlocks.js"></script>
+</body>
+
+</html>

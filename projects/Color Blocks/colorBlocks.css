@@ -1,0 +1,53 @@
+body {
+    text-align: center;
+    background: rgba(0,0,0, 0.8);
+    color: wheat;
+    font-family: 'Press Start 2P', cursive;
+}
+
+i {
+    font-size: 120%;
+}
+
+hr { 
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), wheat, rgba(0, 0, 0, 0));
+}
+
+h1 {
+    position: absolute;    
+}
+
+.jumbotron {
+    background: inherit;
+}
+
+.btn {
+    color: black;
+}
+
+.btn:hover {
+    color: white;
+}
+
+
+.myCard {
+    height: 150px;
+    width: 150px;
+    border-radius: 10%;
+    font-size: 50px;
+    padding-top: 40px;
+    margin: 0 10px 10px 0;
+}
+
+.cardsRow {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+@media (min-width: 1000px){
+    #game-title {
+        position: fixed;
+    }
+}

@@ -33,6 +33,14 @@ let skillsArr = [
     },
 ]
 
+let projectsArr = [
+    {
+        title: "Color Blocks",
+        image: "./projects/Color Blocks/colorBlocks.png",
+        link: "./projects/Color Blocks/colorBlocks.html",
+    },
+]
+
 function populateSkills(){
     sortByTitle(skillsArr)
 
@@ -42,8 +50,7 @@ function populateSkills(){
                         <i class="${skill.icon}"></i>
                     </div>
                     <div class="card-footer border-dark">${skill.title}</div>
-                </div>`
-        console.log(str)
+                    </div>`
         showSkills.innerHTML += str
     })
 }
@@ -61,8 +68,3 @@ function sortByTitle(objectsArr){
 }
 
 populateSkills()
-
-
-// function toPosition(divid){
-//     $('html, body').animate({scrollTop:$(divid).position().top - 50 }, 'slow');
-// }

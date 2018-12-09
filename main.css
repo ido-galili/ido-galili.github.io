@@ -9,7 +9,7 @@ body {
 
 .section {
     height: 100vh;
-    padding: 5vh;
+    padding: 100px;
 }
 
 .section:nth-child(even) {
