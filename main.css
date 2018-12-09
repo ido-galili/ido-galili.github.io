@@ -1,0 +1,56 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+}
+
+.card i {
+    font-size: 5em;
+}
+
+.section {
+    height: 100vh;
+    padding: 5vh;
+}
+
+.section:nth-child(even) {
+    background: rgba(0, 0, 0, 0.9); 
+    color: wheat;
+}
+
+.light-section {
+    background: whitesmoke;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+#ido-img {
+    border-radius: 50%;
+    height: 10vw;
+    width: 10vw;
+}
+
+#showSkills {
+    padding-left: 11em;
+}
+
+/* #about {
+   
+}
+
+#skills {
+   
+}
+
+
+#portfolio {
+   
+}
+
+
+#resume {
+  
+}
+
+#contact {
+   
+} */
+
