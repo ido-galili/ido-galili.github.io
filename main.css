@@ -1,10 +1,20 @@
+html {
+    scroll-behavior: smooth;
+    scrollbar-3dlight-color: aqua;
+}
+
 body {
     font-family: 'Roboto Mono', monospace;
     text-align: center;
+    position: relative;
 }
 
 .card i {
     font-size: 5em;
+}
+
+.card:hover {
+    box-shadow: 1px 1px black;
 }
 
 .section {
@@ -24,16 +34,16 @@ body {
 
 #ido-img {
     border-radius: 50%;
-    height: 10vw;
-    width: 10vw;
+    height: 250px;
+    width: 250px;
 }
 
 #showSkills {
     padding-left: 11em;
 }
 
-/* #about {
-   
+#about {
+   padding-top: 25vh;
 }
 
 #skills {

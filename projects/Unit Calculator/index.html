@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./page15.css">
+    <title>Page 15 - Qt. 1-10</title>
+</head>
+
+<body>
+    <div class="row m-0">
+        <div class="col-4">
+            <div class="row h-50">
+                <div id="one" class="col-12 border_margin">
+                    <h2>Qt. 1 - Sum and Average</h2>
+                    <form id="sumAndAvgForm" onsubmit="return false">
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="text" class="form-control" id="sum1" placeholder="Number1">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" id="sum2" placeholder="Number2">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" id="sum3" placeholder="Number3">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col mt-2 mb-2">
+                                <button type="submit" class="btn btn-primary" onclick="sumAndAvg(sumDiv, avgDiv, sumAndAvgForm)">Calculate!</button>
+                                <button type="" class="btn btn-primary" onclick="resetForm(sumAndAvgForm, [sumDiv, avgDiv])">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                    <p id="sumDiv">Sum: </p>
+                    <p id="avgDiv">Average: </p>
+                </div>
+            </div>
+            <div class="row h-50" style="overflow: hidden;">
+                <div id="two" class="col-6 border_margin">
+                    <h3>Qt. 2 - Rectangle</h3>
+                    <form id="rectangle" onsubmit="return false">
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="text" class="form-control" id="len" placeholder="length">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" id="width" placeholder="width">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col mt-2 mb-2">
+                                <button type="submit" class="btn btn-primary" onclick="recAreaAndPerimeter(Number(len.value), Number(width.value), areaDiv, perDiv, rectangle)">Calculate!</button>
+                                <button type="" class="btn btn-primary" onclick='resetForm(rectangle, [areaDiv, perDiv])'>Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                    <p id="areaDiv">Area: </p>
+                    <p id="perDiv">Perimeter: </p>
+                </div>
+                <div id="three" class="col-6 border_margin">
+                    <h3>Qt. 3 - Cylinder Volume</h3>
+                    <form id="cylinder" onsubmit="return false">
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="text" class="form-control" id="diameter" placeholder="diameter">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" id="depth" placeholder="depth">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col mt-2 mb-2">
+                                <button type="submit" class="btn btn-primary" onclick="cylinderVolume(Number(diameter.value), Number(depth.value), volumeDiv, cylinder)">Calculate!</button>
+                                <button type="" class="btn btn-primary" onclick='resetForm(cylinder, [volumeDiv])'>Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                    <p id="volumeDiv">Capacity: </p>
+                </div>
+            </div>
+        </div>
+        <div id="four" class="col-4 border_margin">
+            <h1>19.11.2018 Exercise</h1>
+            <p>Page 15 - Qt. 1-10</p>
+            <i class="fas fa-balance-scale fa-8x"></i>
+            <br>
+            <br>
+            <button class="btn btn-large btn-primary" onclick="fillGridColors(boxesIdArr)" style="font-size: 2vw">Change
+                    Colors!</button>
+        </div>
+        <div id="five" class="col-2 border_margin">
+            <h3>Qt. 4 - Minutes to Hours</h3>
+            <form id="minutesToHours" onsubmit="return false">
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" class="form-control" id="minutes" placeholder="movie length in minutes">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col mt-2 mb-2">
+                        <button type="submit" class="btn btn-primary" onclick="minToHrs(Number(minutes.value), hoursDiv, minutesToHours)">Calculate!</button>
+                        <button type="" class="btn btn-primary" onclick='resetForm(minutesToHours, [hoursDiv])'>Reset</button>
+                    </div>
+                </div>
+
+            </form>
+            <p id="hoursDiv">Movie Length: </p>
+        </div>
+        <div class="col-2 p-0">
+            <div id="six" class="col-12 h-50 border_margin vertical_text">
+                <h3>Qt. 5 - Get Right digit</h3>
+                <form id="rightDigitForm" onsubmit="return false">
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" class="form-control" id="num" placeholder="Enter a 4(+) digit number">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col mt-2 mb-2">
+                            <button type="submit" class="btn btn-primary" onclick="rightDigit(Number(num.value), rightDigitDiv, rightDigitForm)">Calculate!</button>
+                            <button type="" class="btn btn-primary" onclick='resetForm(rightDigitForm, [rightDigitDiv])'>Reset</button>
+                        </div>
+                    </div>
+                </form>
+                <p id="rightDigitDiv">Right Digit: </p>
+            </div>
+            <div id="seven" class="col-12 h-50 border_margin vertical_text">
+                <h3>Qt. 6 - Get Second Right Digit</h3>
+                <form id="secondRightDigitForm" onsubmit="return false">
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" class="form-control" id="number" placeholder="Enter a 4(+) digit number">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col mt-2 mb-2">
+                            <button type="submit" class="btn btn-primary" onclick="secondRightDigit(Number(number.value), secondRightDigitDiv, secondRightDigitForm)">Calculate!</button>
+                            <button type="" class="btn btn-primary" onclick='resetForm(secondRightDigitForm, [secondRightDigitDiv])'>Reset</button>
+                        </div>
+                    </div>
+
+                </form>
+                <p id="secondRightDigitDiv">Second Right Digit: </p>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div id="eight" class="col-2 border_margin vertical_text">
+            <h3>Qt. 7 - Get Left Digit</h3>
+            <form id="leftDigitForm" onsubmit="return false">
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" class="form-control" id="number2" placeholder="Enter a 3 digit number">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col mt-2 mb-2">
+                        <button type="submit" class="btn btn-primary" onclick="leftDigit(Number(number2.value), leftDigitDiv, leftDigitForm)">Calculate!</button>
+                        <button type="" class="btn btn-primary" onclick='resetForm(leftDigitForm, [leftDigitDiv])'>Reset</button>
+                    </div>
+                </div>
+
+            </form>
+            <p id="leftDigitDiv">Left Digit: </p>
+        </div>
+        <div id="nine" class="col-4 border_margin vertical_text">
+            <h3>Qt. 8 - Sum of Digits</h3>
+            <form id="digitsSumForm" onsubmit="return false">
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" class="form-control" id="number3" placeholder="Enter a 2 digit number">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col mt-2 mb-2">
+                        <button type="submit" class="btn btn-primary" onclick="sumOfDigits(Number(number3.value), digitsSumDiv, digitsSumForm)">Calculate!</button>
+                        <button type="" class="btn btn-primary" onclick='resetForm(digitsSumForm, [digitsSumDiv])'>Reset</button>
+                    </div>
+                </div>
+
+            </form>
+            <p id="digitsSumDiv">Sum of Digits: </p>
+        </div>
+        <div id="ten" class="col-4 border_margin vertical_text">
+            <h3>Qt. 9 - Reverse Digits</h3>
+            <form id="reverseDigitsForm" onsubmit="return false">
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" class="form-control" id="number4" placeholder="Enter a 2 digit number between 10-99">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col mt-2 mb-2">
+                        <button type="submit" class="btn btn-primary" onclick="reverseDigits(Number(number4.value), reversedDigitsDiv, reverseDigitsForm)">Calculate!</button>
+                        <button type="" class="btn btn-primary" onclick='resetForm(reverseDigitsForm, [reversedDigitsDiv])'>Reset</button>
+                    </div>
+                </div>
+
+            </form>
+            <p id="reversedDigitsDiv">Reversed Number: </p>
+        </div>
+        <div id="eleven" class="col-2 border_margin vertical_text">
+            <h3>Qt. 10 - Find Bigger Even</h3>
+            <form id="biggerEvenForm" onsubmit="return false">
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" class="form-control" id="number5" placeholder="Enter a number">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col mt-2 mb-2">
+                        <button type="submit" class="btn btn-primary" onclick="biggerEven(Number(number5.value), biggerEvenDiv, biggerEvenForm)">Calculate!</button>
+                        <button type="" class="btn btn-primary" onclick='resetForm(biggerEvenForm, [biggerEvenDiv])'>Reset</button>
+                    </div>
+                </div>
+
+            </form>
+            <p id="biggerEvenDiv">Bigger Even: </p>
+        </div>
+    </div>
+    <script src="./page15.js"></script>
+</body>
+
+</html>
