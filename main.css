@@ -21,7 +21,7 @@ body {
     padding: 100px;
 }
 
-.section:nth-child(even) {
+.section:nth-of-type(odd) {
     background: rgba(0, 0, 0, 0.9); 
     color: wheat;
 }
