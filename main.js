@@ -53,7 +53,7 @@ function populateSkills(){
                     </div>
                     <div class="card-footer border-dark">${skill.title}</div>
                     </div>`
-        showSkills.innerHTML += str
+        document.getElementById("showSkills").innerHTML += str
     })
 }
 
