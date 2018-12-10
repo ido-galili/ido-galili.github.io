@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Inconsolata', monospace;
     text-align: center;
     position: relative;
 }
@@ -26,9 +26,14 @@ body {
     color: wheat;
 }
 
-.light-section {
+.section:nth-of-type(even) {
     background: whitesmoke;
     color: rgba(0, 0, 0, 0.9);
+}
+
+.nav-text {
+    font-size: 1.5em;
+    margin-right: 20px;
 }
 
 #ido-img {
