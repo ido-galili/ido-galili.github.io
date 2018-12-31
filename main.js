@@ -1,60 +1,36 @@
 'use strict'
 
-let skillsArr = [
-    {
-        title: "JavaScript",
-        icon: "devicon-javascript-plain colored"
-    },
-    {
-        title: "CSS3",
-        icon: "devicon-css3-plain colored"
-    },
-    {
-        title: "Bootstrap",
-        icon: "devicon-bootstrap-plain colored"
-    },
-    {
-        title: "Git",
-        icon: "devicon-git-plain colored"
-    },
-    {
-        title: "ExpressJS",
-        icon: "devicon-express-original-wordmark colored"
-    },
-    {
-        title: "NodeJS",
-        icon: "devicon-nodejs-plain-wordmark colored"
-    },
-    {
-        title: "HTML5",
-        icon: "devicon-html5-plain colored"
-    },
-    {
-        title: "MongoDB",
-        icon: "devicon-mongodb-plain colored"
-    },
-]
-
-let projectsArr = [
-    {
-        title: "Color Blocks",
-        image: "./projects/Color Blocks/colorBlocks.png",
-        link: "./projects/Color Blocks/colorBlocks.html",
-    },
-]
-
 function populateSkills(){
     sortByTitle(skillsArr)
+    let str = ``
 
     skillsArr.forEach(skill => {
-        let str = `<div class="card bg-light text-center border-dark mr-4 mb-4" style="width: 11rem;">
-                    <div class="card-body">
-                        <i class="${skill.icon}"></i>
-                    </div>
-                    <div class="card-footer border-dark">${skill.title}</div>
-                    </div>`
-        document.getElementById("showSkills").innerHTML += str
+        str += `<div class="skill-card card bg-light text-center border-dark mr-4 mb-4">`
+        str += `<div class="card-body">`
+        str += `<i class="${skill.icon}"></i>`
+        str += `</div>`
+        str += `<div class="card-footer border-dark">${skill.title}</div>`
+        str += `</div>`
     })
+
+    document.getElementById("showSkills").innerHTML += str
+}
+
+function populateProjects(){
+    sortByTitle(projectsArr)
+    let str = ``
+    
+    projectsArr.forEach(project => {
+        str += `<div class="project-card m-4" onclick="window.open('${project.link}')">`
+        str += `<img class="project-image" src="${project.image}">`
+        str += `<div class="overlay-middle">`
+        str += `<i class="far fa-eye fa-4x"></i>`
+        str += `<h3>${project.title}</h3>`
+        str += `</div>`
+        str += `</div>`
+    })
+
+    document.getElementById("showProjects").innerHTML += str
 }
 
 function sortByTitle(objectsArr){
@@ -69,4 +45,13 @@ function sortByTitle(objectsArr){
     })
 }
 
-populateSkills()
+function initPage(){
+    populateSkills()
+    populateProjects()
+}
+
+window.onload = () => {
+    initPage()
+}
+
+

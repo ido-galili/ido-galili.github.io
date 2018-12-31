@@ -1,0 +1,13 @@
+body {
+    background: rgba(0, 0, 0, 0.8);
+    color: wheat;
+    padding-top: 3vh;
+}
+
+#canvas-section {
+    padding-top: 100px;
+}
+
+#clear-btn {
+    width: 500px;
+}

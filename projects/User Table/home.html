@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./main.css">
+    <title>Users Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="offset-4 col-4 mt-5">
+                <form id="myForm">
+                    <div class="form-group">
+                        <label for="nameInput">Name</label>
+                        <input type="text" class="form-control" id="nameInput" placeholder="jane doe">
+                    <div class="form-group">
+                        <label for="emailInput">Email</label>
+                        <input type="email" class="form-control" id="emailInput" placeholder="jane@doe.com">
+                    </div>
+                    <div class="form-group">
+                            <label for="phoneInput">Phone Number</label>
+                            <input type="text" class="form-control" id="phoneInput" placeholder="050-1234567">
+                    </div>
+                    <button type="button" class="btn btn-lg btn-outline-primary" onclick="sendForm()">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let users = []
+        myForm.reset()
+
+        if(localStorage.users){
+            users = JSON.parse(localStorage.users)
+        }
+
+        function sendForm(){
+            let user = {
+                name: nameInput.value,
+                email: emailInput.value,
+                phone: phoneInput.value
+            }
+            users.push(user)
+            localStorage.users = JSON.stringify(users)
+            
+            window.location.href = "table.html"
+        }
+        
+    </script>
+</body>
+
+</html>

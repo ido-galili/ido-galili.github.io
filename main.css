@@ -8,21 +8,73 @@ body {
     position: relative;
 }
 
-.card i {
-    font-size: 5em;
+.skill-card {
+    width: 180px;
 }
 
-.card:hover {
+.skill-card i {
+    font-size: 80px;
+}
+
+.skill-card .card-footer {
+    font-size: 20px;
+}
+
+.skill-card:hover {
     box-shadow: 1px 1px black;
 }
 
+.project-card {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    border: 2px solid wheat;
+    border-radius: 5px;
+}
+
+.project-image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+    border: 3px solid black;
+    backface-visibility: hidden;
+}
+
+.overlay-middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.project-card:hover .project-image {
+    opacity: 0.3;
+}
+
+.project-card:hover .overlay-middle {
+    opacity: 1;
+}
+
 .section {
-    height: 100vh;
+    min-height: 800px;
     padding: 100px;
 }
 
+@media screen and (min-width: 1400px) {
+    .section {
+        height: 100vh;
+        padding: 100px;
+    }
+}
+
 .section:nth-of-type(odd) {
-    background: rgba(0, 0, 0, 0.9); 
+    background: rgba(0, 0, 0, 0.9);
     color: wheat;
 }
 
@@ -47,5 +99,5 @@ body {
 }
 
 #about {
-   padding-top: 25vh;
+    padding-top: 25vh;
 }

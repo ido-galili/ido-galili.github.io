@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./images/notebg.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:400,700|Staatliches" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>My Task Board</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-center pt-5 mb-2">
+            <header>My Task Board</header>
+        </div>
+        <!-- Popup Alerts -->
+        <div class="row justify-content-center mb-2">
+            <div id="pop-alert" class="alert justify-content-center m-0"></div>
+        </div>
+        <!-- Task Form -->
+        <section id="form-section" class="row">
+            <div class="offset-3 col-6">
+                <form id="task-form" class="form-inline justify-content-center" onsubmit="return false;">
+                    <div class="form-group mb-2">
+                        <textarea id="text-input" placeholder="Write your task here"></textarea>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="date-input" class="mr-2">
+                            <span class="fa-stack fa-2x">
+                                <i class="fas fa-square fa-stack-2x"></i>
+                                <i class="fas fa-calendar-alt fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </label>
+                        <input type="date" class="form-control-lg mr-2" id="date-input">
+
+                        <label for="time-input" class="mr-2">
+                            <span class="fa-stack fa-2x">
+                                <i class="fas fa-square fa-stack-2x"></i>
+                                <i class="fas fa-clock fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <input type="time" class="form-control-lg mr-2" id="time-input">
+                    </div>
+                    <div class="form-group mb-2">
+                        <button class="btn btn-lg btn-primary mr-2" onclick="sendForm()">Add Task</button>
+                        <button class="btn btn-lg btn-danger" onclick="clearForm()">Clear Form</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- Show Task -->
+        <section id="tasks-section" class="row pt-3"></section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

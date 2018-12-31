@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./main.css">
+    <title>Circles and Sphere</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <h1>Input radius value and get the volume of a sphere.</h1>
+                <form id="circle-form" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="radius">Radius</label>
+                        <input type="text" class="form-control" id="radius" placeholder="Enter radius">
+                    </div>
+                    <div class="form-group">
+                        <label for="volume">Volume</label>
+                        <input type="text" class="form-control" id="volume">
+                    </div>
+                    <button class="btn btn-lg btn-primary" onclick="sendForm()">Calculate</button>
+                </form>
+            </div>
+            <div class="col-6">
+                <h2>Drawing on Canvas!</h2>
+                <canvas id="circleCanvas"></canvas>
+                <button id="clear-btn" class="btn btn-lg btn-danger" onclick="resetCanvasAndForm()">Clear!</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+body {
+    font-family: 'Gamja Flower', cursive;
+    font-size: 30px;
+    background: rgba(0,0,0,0.8); 
+    color: whitesmoke;
+}
+
+.jumbotron {
+    background: lightseagreen;
+}

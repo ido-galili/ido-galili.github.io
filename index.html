@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
     <link rel="stylesheet" href="./main.css">
-    <title>Ido Galili - Fullstack Developer Student</title>
+    <title>Ido Galili</title>
 </head>
 
 <body data-spy="scroll" data-target="#main-nav">
@@ -46,16 +46,24 @@
                 </li>
             </ul>
             <ul class="navbar-nav">
-                <li class="nav-item mr-2 pr-2">
+                <li class="nav-item mr-1">
+                    <a href="mailto: ido.galili@zoho.com" class="nav-link">
+                        <i class="fas fa-envelope-square fa-3x"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item mr-1">
                     <a href="https://github.com/ido-galili/" class="nav-link" target="_blank">
                         <i class="fab fa-github-square fa-3x"></i>
                     </a>
                 </li>
+
                 <li class="nav-item">
                     <a href="https://www.linkedin.com/in/ido-galili-levin-825568b8" class="nav-link" target="_blank">
                         <i class="fab fa-linkedin fa-3x"></i>
                     </a>
                 </li>
+
             </ul>
         </div>
     </nav>
@@ -65,7 +73,7 @@
         <div class="row">
             <div class="col-12">
                 <img id="ido-img" class="mb-4" src="./images/ido.jpg" alt="">
-                <h1>Ido Galili</h1>                
+                <h1>Ido Galili</h1>
                 <h1>Fullstack Student</h1>
             </div>
         </div>
@@ -74,29 +82,30 @@
     <div id="skills" class="section">
         <div class="container">
             <h1 class="mb-4">Skills</h1>
-            <div id="showSkills" class="row">
-            </div>
+            <div id="showSkills" class="row"></div>
         </div>
     </div>
 
     <div id="projects" class="section">
-            <h1 class="mb-4">Projects</h1>
+        <h1 class="mb-4">Projects</h1>
+        <div id="showProjects" class="row justify-content-center"></div>
     </div>
 
     <div id="resume" class="section">
         <div class="container">
             <h1 class="mb-4">Resume</h1>
-            <div id="showSkills" class="row">
-            </div>
         </div>
     </div>
 
     <div id="contact" class="section">
         <div class="container">
             <h1 class="mb-4">Contact Me</h1>
-            <div id="showSkills" class="row">
+            <div class="col-6">
+
             </div>
+            <div class="col-6"></div>
         </div>
+    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -107,7 +116,7 @@
         crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0"
         crossorigin="anonymous"></script>
-
+    <script src="./data.js"></script>
     <script src="./main.js"></script>
 </body>
 
