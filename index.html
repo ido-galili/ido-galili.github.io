@@ -6,115 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="./images/favicon.ico">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-    <link rel="stylesheet" href="./main.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Staatliches" rel="stylesheet">
+    <link rel="stylesheet" href="./main2.css">
     <title>Ido Galili</title>
 </head>
 
-<body data-spy="scroll" data-target="#main-nav">
-    <!-- Navigation Bar -->
-    <nav id="main-nav" class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
-        <a class="navbar-brand pl-3 pr-3" href="#about">
-            <i class="fas fa-desktop fa-2x" style="color: lightseagreen"></i>
-            <i class="fas fa-laptop fa-2x" style="color: lightcoral"></i>
-            <i class="fas fa-mobile-alt fa-2x" style="color: wheat"></i>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<body>
+    <!-- data-spy="scroll" data-target="#main-nav" -->
+    <nav id="main-nav">
+        <div class="logo">
+            <a class="" href="#">
+                <svg class="fas fa-desktop"></svg>
+                <svg class="fas fa-laptop"></svg>
+                <svg class="fas fa-mobile-alt"></svg>
+            </a>
+        </div>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item nav-text">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item nav-text">
-                    <a class="nav-link" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item nav-text">
-                    <a class="nav-link" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item nav-text">
-                    <a class="nav-link" href="#resume">Resume</a>
-                </li>
-                <li class="nav-item nav-text">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav">
-                <li class="nav-item mr-1">
-                    <a href="mailto: ido.galili@zoho.com" class="nav-link">
-                        <i class="fas fa-envelope-square fa-3x"></i>
-                    </a>
-                </li>
+        <div class="nav-center">
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#resume">Resume</a>
+            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="#contact">Contact</a>
+        </div>
 
-                <li class="nav-item mr-1">
-                    <a href="https://github.com/ido-galili/" class="nav-link" target="_blank">
-                        <i class="fab fa-github-square fa-3x"></i>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="https://www.linkedin.com/in/ido-galili-levin-825568b8" class="nav-link" target="_blank">
-                        <i class="fab fa-linkedin fa-3x"></i>
-                    </a>
-                </li>
-
-            </ul>
+        <div class="nav-right">
+            <a href="mailto: ido.galili@zoho.com" class="nav-link">
+                <i class="fas fa-envelope-square fa-3x"></i>
+            </a>
+            <a href="https://github.com/ido-galili/" class="nav-link" target="_blank">
+                <i class="fab fa-github-square fa-3x"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ido-galili-levin-825568b8" class="nav-link" target="_blank">
+                <i class="fab fa-linkedin fa-3x"></i>
+            </a>
         </div>
     </nav>
 
     <!-- Page Sections -->
-    <div id="about" class="section">
-        <div class="row">
-            <div class="col-12">
-                <img id="ido-img" class="mb-4" src="./images/ido.jpg" alt="">
+    <section id="about" class="section">
+        <div id="show-about">
+            <div id="about-img">
+                <img id="about-img" src="./images/ido.jpg">
                 <h1>Ido Galili</h1>
                 <h1>Fullstack Student</h1>
             </div>
-        </div>
-    </div>
-
-    <div id="skills" class="section">
-        <div class="container">
-            <h1 class="mb-4">Skills</h1>
-            <div id="showSkills" class="row"></div>
-        </div>
-    </div>
-
-    <div id="projects" class="section">
-        <h1 class="mb-4">Projects</h1>
-        <div id="showProjects" class="row justify-content-center"></div>
-    </div>
-
-    <div id="resume" class="section">
-        <div class="container">
-            <h1 class="mb-4">Resume</h1>
-        </div>
-    </div>
-
-    <div id="contact" class="section">
-        <div class="container">
-            <h1 class="mb-4">Contact Me</h1>
-            <div class="col-6">
-
+            <div id="vertical-break"></div>
+            <div id="about-description">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentia</p>
             </div>
-            <div class="col-6"></div>
         </div>
-    </div>
-    </div>
+        
+    </section>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0"
+    <section id="skills" class="section">
+        <header>Skills</header>
+        <div id="show-skills"></div>
+    </section>
+
+    <section id="resume" class="section">
+        <header>Resume</header>
+    </section>
+
+    <section id="projects" class="section">
+        <header>Show Case</header>
+        <div id="show-projects"></div>
+    </section>
+
+    <section id="contact" class="section">
+        <header>Contact Me</header>
+    </section>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1"
         crossorigin="anonymous"></script>
     <script src="./data.js"></script>
     <script src="./main.js"></script>
