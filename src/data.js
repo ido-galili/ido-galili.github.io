@@ -1,11 +1,29 @@
 let skillsArr = [
     {
-        title: "JavaScript",
-        icon: "devicon-javascript-plain colored"
+        title: "HTML5",
+        icon: "devicon-html5-plain colored"
     },
     {
         title: "CSS3",
         icon: "devicon-css3-plain colored"
+    },
+    {
+        title: "JavaScript",
+        icon: "devicon-javascript-plain colored"
+    },
+    {
+        title: "NodeJS",
+        icon: "devicon-nodejs-plain-wordmark colored"
+    },
+    {
+        title: "ExpressJS",
+        icon: "devicon-express-original-wordmark colored"
+    },
+    
+    
+    {
+        title: "MongoDB",
+        icon: "devicon-mongodb-plain colored"
     },
     {
         title: "Bootstrap",
@@ -15,22 +33,7 @@ let skillsArr = [
         title: "Git",
         icon: "devicon-git-plain colored"
     },
-    {
-        title: "ExpressJS",
-        icon: "devicon-express-original-wordmark colored"
-    },
-    {
-        title: "NodeJS",
-        icon: "devicon-nodejs-plain-wordmark colored"
-    },
-    {
-        title: "HTML5",
-        icon: "devicon-html5-plain colored"
-    },
-    {
-        title: "MongoDB",
-        icon: "devicon-mongodb-plain colored"
-    },
+    
 ]
 
 let projectsArr = [

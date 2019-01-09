@@ -7,12 +7,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Staatliches|Secular+One|Miriam+Libre:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Staatliches" rel="stylesheet">
     <link rel="stylesheet" href="./main.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1"
+        crossorigin="anonymous"></script>
+    <script defer src="./src/data.js"></script>
+    <script defer src="./src/main.js"></script>
+    <script>
+        window.addEventListener("load", () => {
+            setTimeout(() => {
+                document.querySelector("#loading").style.display = "none"
+            }, 1500)
+        })
+    </script>
     <title>Ido Galili</title>
 </head>
 
 <body>
+    <div id="loading">
+        <div class="ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
     <nav>
         <div class="logo">
             <a class="" href="#">
@@ -23,37 +41,37 @@
         </div>
 
         <div class="nav-center">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#resume">Resume</a>
-            <a href="#projects">Show Case</a>
-            <a href="#contact">Contact</a>
+            <a href="#landing">About</a>
+            <a href="#skills-anchor">Skills</a>
+            <a href="#resume-anchor">Resume</a>
+            <a href="#show-case-anchor">Show Case</a>
+            <a href="#contact-anchor">Contact</a>
         </div>
 
         <div class="nav-right">
             <a href="mailto: ido.galili@zoho.com">
-                <i class="fas fa-envelope-square fa-3x"></i>
+                <svg class="fas fa-envelope-square"></svg>
             </a>
             <a href="https://github.com/ido-galili/" target="_blank">
-                <i class="fab fa-github-square fa-3x"></i>
+                <svg class="fab fa-github-square"></svg>
             </a>
             <a href="https://www.linkedin.com/in/ido-galili-levin-825568b8" target="_blank">
-                <i class="fab fa-linkedin fa-3x"></i>
+                <svg class="fab fa-linkedin"></svg>
             </a>
         </div>
     </nav>
 
     <!-- Page Sections -->
-    <section id="about">
-        <div id="show-about">
-            <div id="about-img">
-                <img id="about-img" src="./images/ido.jpg">
-                <h1>Ido Galili</h1>
-                <h1>Fullstack Student</h1>
-            </div>
-            <div id="vertical-break"></div>
-            <div id="about-description">
-                <p>Hello, my name is Ido
+    <section id="landing">
+        <div class="container">
+            <div id="about" class="content">
+                <div id="image" class="vertical-rule">
+                    <img src="./images/ido.jpg">
+                    <h1>Ido Galili</h1>
+                    <h1>Fullstack Student</h1>
+                </div>
+                <p>
+                    Hello, my name is Ido
                     <br>
                     <br>I'm enthusiast about coding,
                     <br>Always pursuing Simple and Intuitive UI and UX
@@ -63,54 +81,69 @@
                     <br>Feel free to contact me at ido.galili@zoho.com
                 </p>
             </div>
+            <!-- <a href="#landing"><svg class="fas fa-arrow-circle-down"></svg></a> -->
         </div>
-        <a class="test" href="#skills"><i class="far fa-arrow-alt-circle-down"></i></a>
-
     </section>
 
-    <section id="skills" class="section">
-        <h1 class="vertical-text">Skills</h1>
-        <div id="show-skills"></div>
-    </section>
-
-    <section id="resume" class="section">
-        <h1 class="vertical-text">Resume</h1>
-        <div id="resume-icons">
-            <a href="./public/CV/Ido Galili-Levin CV - December 2018.pdf" target="_blank"><h1>English</h1></a>
-            <a href="./public/CV/עידו גלילי - קורות חיים - דצמבר 2018.pdf" target="_blank"><h1>עברית</h1></a>
+    <section id="skills-anchor">
+        <div class="container">
+            <h1 class="horizontal-text">Skills</h1>
+            <p class="section-description">
+                These are my set of Web Deveplopment Skills.
+                <br>More to come in the near future...
+            </p>
+            <div id="skills" class="content"></div>
         </div>
-
     </section>
 
-    <section id="projects" class="section">
-        <h1 class="vertical-text">Show Case</h1>
-        <div id="show-projects"></div>
+    <section id="resume-anchor">
+        <div class="container">
+            <h1 class="horizontal-text">Resume</h1>
+            <div id="resume" class="content">
+                <p></p>
+                <a href="./public/CV/Ido Galili-Levin CV - January 2019.pdf" target="_blank">
+                    <p>English</p>
+                </a>
+                <a href="./public/CV/עידו גלילי - קורות חיים - ינואר 2019.pdf" target="_blank">
+                    <p>Hebrew</p>
+                </a>
+            </div>
+        </div>
     </section>
 
-    <section id="contact" class="section">
-        <h1 class="horizontal-text">Contact Me</h1>
-        <div>
-            <a href="mailto: ido.galili@zoho.com">
-                <i class="fas fa-envelope-square"></i>
-                <span>ido.galili@zoho.com</span>
-            </a>
-            <a href="https://github.com/ido-galili/" target="_blank">
-                <i class="fab fa-github-square"></i>
-                <span>ido-galili</span>
-            </a>
-            <a href="https://www.linkedin.com/in/ido-galili-levin-825568b8" target="_blank">
-                <i class="fab fa-linkedin"></i>
-                <span>Ido Galili-Levin</span>
-            </a>
+    <section id="show-case-anchor">
+        <div class="container">
+            <h1 class="horizontal-text">Show Case</h1>
+            <p class="section-description">You're Welcome to View My Latest Work</p>
+            <div id="show-case" class="content">
+                <button class="arrow" onclick="carouselMoveLeft()"><svg class="far fa-arrow-alt-circle-left"></svg></button>
+                <div class="carousel"></div>
+                <button class="arrow" onclick="carouselMoveRight()"><svg class="far fa-arrow-alt-circle-right"></svg></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-anchor">
+        <div class="container">
+            <h1 class="horizontal-text">Contact Me</h1>
+            <div id="contact" class="content">
+                <a href="mailto: ido.galili@zoho.com">
+                    <svg class="fas fa-envelope-square"></svg>
+                    <p>ido.galili@zoho.com</p>
+                </a>
+                <a href="https://github.com/ido-galili/" target="_blank">
+                    <svg class="fab fa-github-square"></svg>
+                    <p>ido-galili</p>
+                </a>
+                <a href="https://www.linkedin.com/in/ido-galili-levin-825568b8" target="_blank">
+                    <svg class="fab fa-linkedin"></svg>
+                    <p>Ido Galili-Levin</p>
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- <footer></footer> -->
-
-    <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1"
-        crossorigin="anonymous"></script>
-    <script src="./data.js"></script>
-    <script src="./main.js"></script>
 </body>
 
 </html>
