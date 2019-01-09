@@ -26,17 +26,6 @@ body {
     outline: none;
 }
 
-/* .no-js #loader {
-    display: none;
-}
-
-.js #loader {
-    display: block;
-    position: absolute;
-    left: 100px;
-    top: 0;
-} */
-
 #loading {
     display: flex;
     justify-content: center;
