@@ -12,28 +12,37 @@ let skillsArr = [
         icon: "devicon-javascript-plain colored"
     },
     {
+        title: "TypeScript",
+        icon: "devicon-typescript-plain colored"
+    },
+    {
         title: "NodeJS",
-        icon: "devicon-nodejs-plain-wordmark colored"
+        icon: "devicon-nodejs-plain colored"
     },
     {
         title: "ExpressJS",
-        icon: "devicon-express-original-wordmark colored"
+        icon: "devicon-express-original colored"
     },
-    
-    
     {
         title: "MongoDB",
         icon: "devicon-mongodb-plain colored"
+    },
+    {
+        title: "Heroku",
+        icon: "devicon-heroku-original colored"
     },
     {
         title: "Bootstrap",
         icon: "devicon-bootstrap-plain colored"
     },
     {
+        title: "jQuery",
+        icon: "devicon-jquery-plain colored"
+    },
+    {
         title: "Git",
         icon: "devicon-git-plain colored"
-    },
-    
+    }
 ]
 
 let projectsArr = [
@@ -66,5 +75,11 @@ let projectsArr = [
         image: "./images/projects/circles-preview.png",
         link: "./projects/Circles/index.html",
         skills: ["JavaScript", "CSS3", "Bootstrap", "HTML5"]
+    },
+    {
+        title: "Movie Search",
+        image: "./images/projects/movie-search-preview.png",
+        link: "./projects/Movie Search/index.html",
+        skills: ["JavaScript", "CSS3", "Bootstrap", "HTML5", "jQuery"]
     }
 ]

@@ -11,6 +11,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
@@ -19,6 +20,7 @@ body {
     position: relative;
     margin: 0;
     background: var(--dark);
+    font-size: 16px;
 }
 
 *:focus, *:active {
@@ -71,7 +73,7 @@ nav a:hover {
 }
 
 .nav-center {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     letter-spacing: 4px;
 }
 
@@ -81,7 +83,7 @@ nav a:hover {
 
 .nav-right a {
     margin: 0 5px;
-    font-size: 2.5em;
+    font-size: 2.5rem;
 }
 
 .logo svg {
@@ -131,7 +133,7 @@ footer {
 }
 
 .card i {
-    font-size: 7em;
+    font-size: 7rem;
 }
 
 .card-body {
@@ -141,11 +143,11 @@ footer {
 .card-footer {
     margin: 15px 0;
     height: 30%;
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 .card-footer i {
-    font-size: 1.8em;
+    font-size: 1.8rem;
     margin: 0 2px;
 }
 
@@ -360,10 +362,12 @@ section .horizontal-text {
 
 #show-case .carousel-item:hover img {
     opacity: 0.3;
+    cursor: pointer;
 }
 
 #show-case .carousel-item:hover .overlay {
     opacity: 1;
+    cursor: pointer;
 }
 
 #show-case button{

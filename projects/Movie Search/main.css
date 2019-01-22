@@ -1,0 +1,85 @@
+body {
+    background: url("./prism.png");
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    color: lightseagreen;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+img {
+    height: 300px;
+}
+
+span {
+    font-size: 2em;
+}
+
+i {
+    transition: 0.3s;
+}
+
+.input-group-text {
+    background: lightseagreen;
+}
+
+#imdb-icon {
+    color: #EAB731;
+}
+
+#pages-footer {
+    display: none;
+}
+
+.star-icon {
+    color: #EAB731;
+    font-size: 1.5em;
+}
+
+.card-footer {
+    background: inherit;
+}
+
+.scroll-ing {
+    overflow: auto;
+}
+
+.single {
+    position: fixed;
+    height: 100%;
+    right: 5rem;
+}
+
+a {
+    text-decoration: none !important;
+    color: inherit;
+    transition: 0.5s;
+}
+
+p {
+    color: rgba(32, 178, 171, 0.589);
+}
+
+a:hover {
+    color: crimson;
+}
+
+#searchDiv {
+    border-right: 10px solid lightseagreen;
+    height: 100vh;
+}
+
+#formDiv {
+    border-bottom: 10px solid lightseagreen;
+}
+
+.right-icon {
+    float: right;
+    color: lightseagreen;
+}
+
+.right-icon:hover {
+    color: crimson;
+    cursor: pointer;
+}
