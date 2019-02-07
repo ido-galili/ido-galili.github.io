@@ -6,7 +6,8 @@ function populateSkills() {
     skillsArr.forEach(skill => {
         str += `<div class="card">`
         str += `<div class="card-body">`
-        str += `<i class="${skill.icon}"></i>`
+        // str += `<i class="${skill.icon}"></i>`
+        str += skill.icon
         str += `</div>`
         str += `<div class="card-footer">${skill.title}</div>`
         str += `</div>`
