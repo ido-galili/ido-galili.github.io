@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="./images/favicon.ico">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css" />
+    <link rel="stylesheet" href="./style.css" />
     <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1"
         crossorigin="anonymous"></script>
     <script defer src="./src/data.js"></script>
@@ -15,9 +15,9 @@
     <script>
         window.addEventListener("load", () => {
             setTimeout(() => {
-                document.querySelector("#loading").style.display = "none"
-            }, 1500)
-        })
+                document.querySelector("#loading").style.display = "none";
+            }, 1500);
+        });
     </script>
     <title>Ido Galili</title>
 </head>
@@ -31,6 +31,10 @@
     </div>
 
     <nav>
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <svg class="fas fa-bars"></svg>
+        </span>
+
         <div class="logo">
             <a class="" href="#">
                 <svg class="fas fa-desktop"></svg>
@@ -39,7 +43,7 @@
             </a>
         </div>
 
-        <div class="nav-center">
+        <div id="main-nav" class="nav-center">
             <a href="#landing">About</a>
             <a href="#skills-anchor">Skills</a>
             <a href="#resume-anchor">Resume</a>
@@ -65,19 +69,19 @@
         <div class="container">
             <div id="about" class="content">
                 <div id="image" class="vertical-rule">
-                    <img src="./images/ido.jpg">
+                    <img src="./images/ido.jpg" />
                     <h1>Ido Galili</h1>
                     <h1>Fullstack Student</h1>
                 </div>
-                <p>
+                <p id="about-desc">
                     Hello, my name is Ido
-                    <br>
-                    <br>I'm enthusiast about coding,
-                    <br>Always pursuing Simple and Intuitive UI and UX
-                    <br>
-                    <br>Based in Kfar Giladi, Israel
-                    <br>
-                    <br>Feel free to contact me at ido.galili@zoho.com
+                    <br />
+                    <br />I'm enthusiast about coding, <br />Always pursuing Simple and
+                    Intuitive UI and UX
+                    <br />
+                    <br />Based in Kfar Giladi, Israel
+                    <br />
+                    <br />Feel free to contact me at ido.galili@zoho.com
                 </p>
             </div>
         </div>
@@ -88,7 +92,7 @@
             <h1 class="horizontal-text">Skills</h1>
             <p class="section-description">
                 These are my set of Web Deveplopment Skills.
-                <br>More to come in the near future...
+                <br />More to come in the near future...
             </p>
             <div id="skills" class="content"></div>
         </div>
@@ -114,7 +118,6 @@
                     <button id="english-btn">English</button>
                     <button id="hebrew-btn">Hebrew</button>
                 </div>
-
             </div>
         </div>
     </section>
@@ -124,9 +127,13 @@
             <h1 class="horizontal-text">Show Case</h1>
             <p class="section-description">You're Welcome to View My Latest Work</p>
             <div id="show-case" class="content">
-                <button class="arrow" onclick="carouselMoveLeft()"><svg class="far fa-arrow-alt-circle-left"></svg></button>
+                <button class="arrow" onclick="carouselMoveLeft()">
+                    <svg class="far fa-arrow-alt-circle-left"></svg>
+                </button>
                 <div class="carousel"></div>
-                <button class="arrow" onclick="carouselMoveRight()"><svg class="far fa-arrow-alt-circle-right"></svg></button>
+                <button class="arrow" onclick="carouselMoveRight()">
+                    <svg class="far fa-arrow-alt-circle-right"></svg>
+                </button>
             </div>
         </div>
     </section>
@@ -137,17 +144,21 @@
             <div id="contact" class="content">
                 <a href="mailto: ido.galili@zoho.com">
                     <svg class="fas fa-envelope-square"></svg>
-                    <!-- <p>ido.galili@zoho.com</p> -->
+                    <p>ido.galili@zoho.com</p>
                 </a>
+
                 <a href="https://github.com/ido-galili/" target="_blank">
                     <svg class="fab fa-github-square"></svg>
-                    <!-- <p>ido-galili</p> -->
+                    <p>ido-galili</p>
                 </a>
+
                 <a href="https://www.linkedin.com/in/ido-galili-levin-825568b8" target="_blank">
                     <svg class="fab fa-linkedin"></svg>
-                    <!-- <p>Ido Galili-Levin</p> -->
+                    <p>Ido Galili-Levin</p>
                 </a>
+
             </div>
+        </div>
         </div>
     </section>
 
