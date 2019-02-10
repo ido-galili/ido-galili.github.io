@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Alef:400,700|Raleway:400,700|Staatliches&subset=hebrew');
+
 :root {
     --nav-background: #24252a;
     --nav-color: whitesmoke;
@@ -23,7 +25,8 @@ body {
     font-size: 16px;
 }
 
-*:focus, *:active {
+*:focus,
+*:active {
     outline: 0;
     outline: none;
 }
@@ -73,7 +76,7 @@ nav a:hover {
 }
 
 .nav-center {
-    font-size: 1.5rem;
+    font-size: 2rem;
     letter-spacing: 4px;
 }
 
@@ -83,7 +86,7 @@ nav a:hover {
 
 .nav-right a {
     margin: 0 5px;
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .logo svg {
@@ -126,23 +129,21 @@ footer {
 /* =================== */
 
 .card {
-    flex-direction: column;
+    /* display: flex; */
     flex-wrap: wrap;
-    margin: 20px 0;
+    justify-content: center;
+    /* margin: 10px; */
+    align-items: center;
     flex-basis: 25%;
+    height: 14rem;
 }
 
-.card i {
-    font-size: 7rem;
-}
-
-.card-body {
-    height: 70%;
+img {
+    width: 8rem;
 }
 
 .card-footer {
     margin: 15px 0;
-    height: 30%;
     font-size: 1.5rem;
 }
 
@@ -152,18 +153,14 @@ footer {
 }
 
 #skills .card:hover {
-    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    animation: shake 0.88s cubic-bezier(.36, .07, .19, .97) both;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     perspective: 1000px;
 }
 
-.card-image {
-    opacity: 1;
-    width: 95%;
-    height: 95%;
-    transition: .5s ease;
-    backface-visibility: hidden;
+#skills {
+    padding-top: 50px;
 }
 
 .overlay {
@@ -181,6 +178,7 @@ footer {
     padding: 0;
     font-size: 5em;
 }
+
 .overlay h3 {
     font-size: 1.5em;
     padding: 0;
@@ -204,7 +202,7 @@ section {
     justify-content: center;
     align-items: flex-start;
     height: 800px;
-    padding: 8vh 20vh;
+    padding: 10vh 20vh;
 }
 
 section:nth-of-type(odd) {
@@ -233,9 +231,9 @@ section:first-of-type {
 section .container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
-    width: 80%;
+    flex-basis: 80%;
     height: 90%;
 }
 
@@ -243,7 +241,7 @@ section .container .content {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-basis: 85%;
+    flex-basis: 100%;
 }
 
 section:first-of-type .container {
@@ -273,7 +271,7 @@ section .horizontal-text {
     letter-spacing: 2px;
     border-bottom: 10px solid;
     padding-bottom: 10px;
-    margin: 0;
+    margin: 0 0 20px 0;
 }
 
 /* About */
@@ -290,7 +288,7 @@ section .horizontal-text {
     border-radius: 50%;
     height: 20em;
     width: 20em;
-    transform: translateX(-50vw);
+    /* transform: translateX(-50vw); */
     opacity: 0;
     animation: 2.5s slide forwards;
 }
@@ -302,10 +300,14 @@ section .horizontal-text {
     animation: 2s fade-in 2.5s forwards;
 }
 
+#landing {
+    padding-top: 5rem;
+}
+
 #landing .container a {
     opacity: 0;
     font-size: 100px;
-    color:var(--about-color);
+    color: var(--about-color);
     animation: 2s fade-in 2.5s forwards;
 }
 
@@ -336,7 +338,7 @@ section .horizontal-text {
     font-size: 1.5em;
     width: 60%;
     padding: 0;
-    margin: 0;
+    margin: 0 0 10px 0;
 }
 
 /* Show-Case */
@@ -370,13 +372,13 @@ section .horizontal-text {
     cursor: pointer;
 }
 
-#show-case button{
-    margin      : 0;
-    padding     : 0;
-    border      : 0;
-    background  : transparent;
-    font-family : inherit;
-    cursor      : pointer;
+#show-case button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-family: inherit;
+    cursor: pointer;
 }
 
 #show-case .arrow {
@@ -394,24 +396,95 @@ section .horizontal-text {
     align-items: flex-start;
 }
 
-#resume a {
-    transition: color 0.4s;
+#resume {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 80%;
+    height: 100%;
+}
+
+.resume-page {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+.resume-active {
+    display: flex !important;
+}
+
+.resume-section {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    font-size: 20px;
+}
+
+.resume-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    align-self: flex-start;
+    color: var(--red);
+}
+
+.resume-block {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: flex-start;
+    word-break: keep-all;
+}
+
+#english-resume {
+    text-align: left;
+}
+
+#hebrew-resume {
+    text-align: right;
+    direction: rtl;
+}
+
+
+
+.resume-year {
+    flex-basis: 20%;
+
+}
+
+.resume-job {
+    flex-basis: 80%;
+}
+
+#resume-btn {
+    display: flex;
+}
+
+#resume button {
+    transition: color 0.3s;
     color: var(--light);
     margin: 0 auto;
+    margin: 0 10px;
 }
 
-#resume a:hover {
+#resume button:hover {
     color: var(--red);
-    
+
 }
 
-#resume a p {
+#resume button {
+    margin: 50px 35px;
     width: 300px;
+    height: 70px;
+    background: inherit;
     font-size: 3em;
     border: 5px solid var(--red);
     border-radius: 10px;
     font-weight: 700;
     font-family: 'Staatliches', cursive;
+    cursor: pointer;
 }
 
 /* Contact */
@@ -422,26 +495,29 @@ section .horizontal-text {
 
 #contact {
     align-self: flex-start;
+    /* justify-content: space-around; */
 }
 
 #contact a {
-    margin: 0 20px;
+    flex-basis: 33%;
     color: var(--red);
+    cursor: default;
 }
 
-#contact a:hover  {
+#contact a svg:hover {
     color: var(--green);
+    cursor: pointer;
 }
 
 #contact a svg {
-    font-size: 80px;
+    font-size: 6rem;
     transition: color 0.4s;
 }
 
 #contact a p {
     margin: 0;
     padding: 0;
-    font-size: 40px;
+    font-size: 2rem;
     transition: color 0.4s;
 }
 
@@ -494,103 +570,81 @@ section .horizontal-text {
     position: relative;
     width: 64px;
     height: 64px;
-  }
-  .ripple div {
+}
+
+.ripple div {
     position: absolute;
     border: 4px solid #dfc;
     opacity: 1;
     border-radius: 50%;
     animation: ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-  }
-  .ripple div:nth-child(2) {
+}
+
+.ripple div:nth-child(2) {
     animation-delay: -0.5s;
-  }
-  @keyframes ripple {
+}
+
+@keyframes ripple {
     0% {
-      top: 28px;
-      left: 28px;
-      width: 0;
-      height: 0;
-      opacity: 1;
+        top: 28px;
+        left: 28px;
+        width: 0;
+        height: 0;
+        opacity: 1;
     }
+
     100% {
-      top: -1px;
-      left: -1px;
-      width: 58px;
-      height: 58px;
-      opacity: 0;
+        top: -1px;
+        left: -1px;
+        width: 58px;
+        height: 58px;
+        opacity: 0;
     }
-  }
-  
+}
+
 
 /* =================== */
 /*      Responsive     */
 /* =================== */
 
-@media screen and (max-width: 768px) {
+/* smartphones */
+@media (max-width: 768px) {
+
+    html,
+    body {
+        font-size: 10px;
+    }
+
     .card {
-        flex-basis: 100%;
+        flex-basis: 50%;
     }
 }
 
-@media screen and (max-width: 900px) {
+/* small devices, tablets */
+@media (min-width: 768px) and (max-width: 992px) {
+
+    html,
+    body {
+        font-size: 12px;
+    }
+
     .card {
         flex-basis: 33%;
     }
-
-    section .vertical-text {
-    transform: rotate(0);
-    }
 }
 
+/* medium devices */
+@media (min-width: 992px) and (max-width: 1366px) {
 
-@media screen and (max-width: 1200px) {
-    .card {
-        flex-basis: 33%;
+    html,
+    body {
+        font-size: 14px;
     }
 
-    section .vertical-text {
-    transform: rotate(0);
-    }
-}
-
-/* @media screen and (min-width: 1200px) {
-    .card {
+    /* .card {
         flex-basis: 25%;
-    }
-    
-    .nav-right {
-        display: block;
-    }
-} */
-
-
-/* smaller than or equal to 768 px (smartphones)
-larger than 768 px (small devices, tablets)
-larger than 992 px (medium devices)
-larger than 1200px (large devices) */
-
-/* @media screen and (max-width: 1366px) {
-    .section {
-        height: 100vh;
-        padding: 100px;
-    }
-} */
-
-/* @media screen and (max-width: 920px) {
-    nav {
-        justify-content: center;
-    }
-
-    a {
-        font-size: 26px;
-    }
+    } */
 }
 
-@media screen and (max-width: 600px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-        background: rgba(0,0,0,0.8);
-    }
-} */
+/* large devices */
+@media (min-width: 1366px) {}

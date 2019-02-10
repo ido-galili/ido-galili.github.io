@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway|Staatliches" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1"
         crossorigin="anonymous"></script>
@@ -39,7 +38,7 @@
                 <svg class="fas fa-mobile-alt"></svg>
             </a>
         </div>
-        
+
         <div class="nav-center">
             <a href="#landing">About</a>
             <a href="#skills-anchor">Skills</a>
@@ -81,7 +80,6 @@
                     <br>Feel free to contact me at ido.galili@zoho.com
                 </p>
             </div>
-            <!-- <a href="#landing"><svg class="fas fa-arrow-circle-down"></svg></a> -->
         </div>
     </section>
 
@@ -100,13 +98,23 @@
         <div class="container">
             <h1 class="horizontal-text">Resume</h1>
             <div id="resume" class="content">
-                <p></p>
-                <a href="./public/CV/Ido Galili-Levin CV - English.pdf" target="_blank">
-                    <p>English</p>
-                </a>
-                <a href="./public/CV/Ido Galili-Levin CV - Hebrew.pdf" target="_blank">
-                    <p>Hebrew</p>
-                </a>
+                <div id="english-resume" class="resume-page resume-active">
+                    <div>
+                        <div id="education-en" class="resume-section"></div>
+                        <div id="experience-en" class="resume-section"></div>
+                    </div>
+                </div>
+                <div id="hebrew-resume" class="resume-page">
+                    <div>
+                        <div id="education-he" class="resume-section"></div>
+                        <div id="experience-he" class="resume-section"></div>
+                    </div>
+                </div>
+                <div id="resume-btn">
+                    <button id="english-btn">English</button>
+                    <button id="hebrew-btn">Hebrew</button>
+                </div>
+
             </div>
         </div>
     </section>
@@ -129,15 +137,15 @@
             <div id="contact" class="content">
                 <a href="mailto: ido.galili@zoho.com">
                     <svg class="fas fa-envelope-square"></svg>
-                    <p>ido.galili@zoho.com</p>
+                    <!-- <p>ido.galili@zoho.com</p> -->
                 </a>
                 <a href="https://github.com/ido-galili/" target="_blank">
                     <svg class="fab fa-github-square"></svg>
-                    <p>ido-galili</p>
+                    <!-- <p>ido-galili</p> -->
                 </a>
                 <a href="https://www.linkedin.com/in/ido-galili-levin-825568b8" target="_blank">
                     <svg class="fab fa-linkedin"></svg>
-                    <p>Ido Galili-Levin</p>
+                    <!-- <p>Ido Galili-Levin</p> -->
                 </a>
             </div>
         </div>
