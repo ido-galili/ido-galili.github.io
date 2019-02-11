@@ -11,7 +11,7 @@
     --green: #55efc4;
 }
 
-html, body {
+html {
     overflow-x: hidden;
 }
 
@@ -24,7 +24,7 @@ body {
     font-family: 'Raleway', sans-serif;
     text-align: center;
     position: relative;
-    margin: 0;
+    margin: 0 auto;
     background: var(--dark);
     font-size: 16px;
 }
@@ -129,15 +129,6 @@ footer {
     z-index: 1;
     padding: 0 20px;
     font-family: 'Staatliches', cursive;
-}
-
-.navbar-toggle {
-    position: absolute;
-    top: 15px;
-    right: 40px;
-    cursor: pointer; 
-    color: rgba(255,255,255,0.8);
-    font-size: 24px;
 }
 
 /* =================== */
@@ -293,7 +284,7 @@ section .horizontal-text {
     height: 20em;
     width: 20em;
     opacity: 0;
-    animation: 2.5s slide forwards;
+    animation: 2.5s fade-in forwards;
 }
 
 #about #image h1 {
@@ -486,6 +477,10 @@ section .horizontal-text {
     cursor: pointer;
 }
 
+#resume .btn-red {
+    color: var(--red);
+}
+
 .resume-page::-webkit-scrollbar {
     width: 0.2em;
 }
@@ -545,12 +540,12 @@ body::-webkit-scrollbar-thumb {
 /*       Animations    */
 /* =================== */
 
-@keyframes slide {
+/* @keyframes slide {
     100% {
         opacity: 1;
         transform: translateX(0);
     }
-}
+} */
 
 @keyframes fade-in {
     100% {
@@ -626,59 +621,77 @@ body::-webkit-scrollbar-thumb {
 /*      Responsive     */
 /* =================== */
 
-@media (min-width: 768px) {
-    #js-navbar-toggle {
-        display: none;
-    }
-}
-
-/* smartphones */
-@media (max-width: 768px) {
-
-    html,
-    body {
-        font-size: 8px;
+@media (max-width: 550px) {
+    html, body {
+        font-size: 9px !important;
     }
 
     .resume-section {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 
-    .nav-center {
-        display: none;
-        flex-direction: column;
-        padding-top: 280px;
-        width: 200px;
-        border-radius: 30px;
-        background-color: var(--nav-background);
+    .resume-page {
+        width: 85%;
+    }
+
+    #resume button {
+        width: 15rem;
+        height: auto;
+        margin: 5px;
+    }
+
+    .card {
+        flex-basis: 33% !important;
+        margin: 0;
+    }
+
+    #skills img {
+        width: 6rem;
+    }
+
+    #skills {
+        padding: 20px 50px;
     }
     
-    .nav-center a {
-        margin: 10px 0;
+}
+
+/* smartphones */ 
+@media (max-width: 992px) {
+    body * {
+        opacity: 1 !important;
     }
 
-    .nav-right {
+    html,
+    body {
+        font-size: 10px;
+    }
+
+    #show-case-anchor {
         display: none;
     }
 
-    #js-navbar-toggle {
-        display: inline;
+    #contact-anchor {
+        background: var(--light) !important;
+        color: var(--dark) !important;
     }
 
-    #about {
-        flex-direction: column;
-        justify-content: flex-start;
+    #contact-anchor .horizontal-text {
+        border-color: var(--green) !important;
     }
 
-    #landing {
-        height: 300px;
+    #contact a {
+        color: inherit;
     }
 
     section {
-        height: 600px;
+        height: auto;
     }
 
     section .section-description {
+        display: none;
+    }
+    
+    .nav-center, .nav-right {
         display: none;
     }
 
@@ -690,6 +703,10 @@ body::-webkit-scrollbar-thumb {
         border: none;
     }
 
+    .overlay {
+        display: none;
+    }
+
     .card {
         flex-basis: 33%;
     }
@@ -698,41 +715,24 @@ body::-webkit-scrollbar-thumb {
         flex-direction: column;
     }
 
+    #landing {
+        height: 400px !important;
+    }
+
     #contact-anchor {
         height: 400px;
     }
 
-    .nav-active {
-        display: flex;
-    }
+    
 }
 
 /* small devices, tablets */
 @media (min-width: 768px) and (max-width: 992px) {
 
-    html,
-    body {
-        font-size: 12px;
-    }  
-
-    .card {
-        flex-basis: 33%;
+    .resume-section {
+        font-size: 1.8rem;
     }
 
-    .nav-center {
-        font-size: 1.3rem;
-        letter-spacing: 2px;
-    }
-    
-    .nav-center a {
-        margin: 0 1.2rem;
-    }
-    
-    .nav-right a {
-        margin: 0 2.5px;
-        font-size: 2.5rem;
-    }
-    
     .logo svg {
         margin: 0 1.5px;
     }
@@ -754,19 +754,27 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* medium devices */
-@media (min-width: 992px) and (max-width: 1366px) {
+@media (min-width: 993px) and (max-width: 1366px) {
 
     html,
     body {
-        font-size: 12px;
+        font-size: 14px;
     }
 
-    /* .card {
+    #landing {
+        height: 600px !important;
+    }
+
+    .nav-center a {
+        font-size: 1.5rem;
+    }
+
+    .card {
         flex-basis: 25%;
-    } */
+    }
 
     .contact-icons {
-        flex-basis: 100%;
+        flex-basis: 33%;
     }
 }
 

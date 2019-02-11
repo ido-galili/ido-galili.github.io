@@ -9,29 +9,27 @@ function initPage() {
 window.onload = () => {
     // window.scroll(0, 60)
     initPage()
-    document.getElementById('english-btn').onclick = () => {
+    document.getElementById('english-btn').addEventListener('click', () => {
         let english = document.getElementById('english-resume')
         if (!english.classList.contains('resume-active')) {
             document.getElementById('hebrew-resume').classList.remove('resume-active')
             document.getElementById('english-resume').classList.add('resume-active')
+            document.getElementById('english-btn').classList.add('btn-red')
+            document.getElementById('hebrew-btn').classList.remove('btn-red')
         }
-
-    }
-    document.getElementById('hebrew-btn').onclick = () => {
+    })
+    document.getElementById('hebrew-btn').addEventListener('click', () => {
         let hebrew = document.getElementById('hebrew-resume')
         if (!hebrew.classList.contains('resume-active')) {
             document.getElementById('english-resume').classList.remove('resume-active')
             document.getElementById('hebrew-resume').classList.add('resume-active')
-
+            document.getElementById('english-btn').classList.remove('btn-red')
+            document.getElementById('hebrew-btn').classList.add('btn-red')
         }
-    }
+    })
 
     let mainNav = document.getElementById('main-nav');
     let navBarToggle = document.getElementById('js-navbar-toggle');
-
-    navBarToggle.addEventListener('click', function () {
-        mainNav.classList.toggle('nav-active');
-    });
 }
 
 function setSkills() {
