@@ -661,6 +661,10 @@ body::-webkit-scrollbar-thumb {
         opacity: 1 !important;
     }
 
+    .horizontal-text {
+        width: 35rem !important;
+    }
+
     html,
     body {
         font-size: 10px;
