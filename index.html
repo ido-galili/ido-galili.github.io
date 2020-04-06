@@ -10,158 +10,60 @@
     <link rel="stylesheet" href="./style.css" />
     <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>    
+    <script src="./src/components/AppNav.js"></script>
+    <script src="./src/components/About.js"></script>
+    <script src="./src/components/Skills.js"></script>
+    <script src="./src/components/Resume.js"></script>
+    <script src="./src/components/Showcase.js"></script>
+    <script src="./src/components/Contact.js"></script>
+    <script src="./src/components/LoadingView.js"></script>
     <script defer src="./src/data.js"></script>
     <script defer src="./src/main.js"></script>
-    <script>
-        window.addEventListener("load", () => {
-            setTimeout(() => {
-                document.querySelector("#loading").style.display = "none";
-            }, 1500);
-        });
-    </script>
     <title>Ido Galili</title>
 </head>
 
 <body>
-    <div id="loading">
-        <div class="ripple">
-            <div></div>
-            <div></div>
-        </div>
+    <div id="app">
+        <loading-view v-if="loading"></loading-view>
+        <template v-else>
+            <app-nav></app-nav>
+            <about></about>
+            <skills
+                title="skills"
+                subtitle="These are my set of Web Development Skills"
+                :skills="skillsArr"
+            >
+            </skills>
+            <resume></resume>
+            <showcase></showcase>
+            <contact></contact>
+        </template>
     </div>
+    
+    <script>
+        Vue.config.devtools = true
 
-    <nav>
-        <div class="logo">
-            <a class="" href="#">
-                <svg class="fas fa-desktop"></svg>
-                <svg class="fas fa-laptop"></svg>
-                <svg class="fas fa-mobile-alt"></svg>
-            </a>
-        </div>
+        Vue.component('app-nav', AppNav);
+        Vue.component('about', About);
+        Vue.component('skills', Skills);
+        Vue.component('resume', Resume);
+        Vue.component('showcase', Showcase);
+        Vue.component('contact', Contact);
+        Vue.component('loading-view', LoadingView);
 
-        <div id="main-nav" class="nav-center">
-            <a href="#landing">About</a>
-            <a href="#skills-anchor">Skills</a>
-            <a href="#resume-anchor">Resume</a>
-            <a href="#show-case-anchor">Show Case</a>
-            <a href="#contact-anchor">Contact</a>
-        </div>
-
-        <div class="nav-right">
-            <a href="mailto: ido.galili@zoho.com">
-                <svg class="fas fa-envelope-square"></svg>
-            </a>
-            <a href="https://github.com/ido-galili/" target="_blank">
-                <svg class="fab fa-github-square"></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/ido-galili-levin-825568b8" target="_blank">
-                <svg class="fab fa-linkedin"></svg>
-            </a>
-        </div>
-    </nav>
-
-    <!-- Page Sections -->
-    <section id="landing">
-        <div class="container">
-            <div id="about" class="content">
-                <div id="image" class="vertical-rule">
-                    <img src="./images/ido.jpg" />
-                    <h1>Ido Galili</h1>
-                    <h1>Fullstack Student</h1>
-                </div>
-                <p id="about-desc">
-                    Hello, my name is Ido
-                    <br />
-                    <br />I'm enthusiast about coding, <br />Always pursuing Simple and
-                    Intuitive UI and UX
-                    <br />
-                    <br />Based in Kfar Giladi, Israel
-                    <br />
-                    <br />Feel free to contact me at ido.galili@zoho.com
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills-anchor">
-        <div class="container">
-            <h1 class="horizontal-text">Skills</h1>
-            <p class="section-description">
-                These are my set of Web Deveplopment Skills.
-                <br />More to come in the near future...
-            </p>
-            <div id="skills" class="content"></div>
-        </div>
-    </section>
-
-    <section id="resume-anchor">
-        <div class="container">
-            <h1 class="horizontal-text">Resume</h1>
-            <div id="resume" class="content">
-                <div id="english-resume" class="resume-page resume-active">
-                    <div>
-                        <div id="education-en" class="resume-section"></div>
-                        <div id="experience-en" class="resume-section"></div>
-                    </div>
-                </div>
-                <div id="hebrew-resume" class="resume-page">
-                    <div>
-                        <div id="education-he" class="resume-section"></div>
-                        <div id="experience-he" class="resume-section"></div>
-                    </div>
-                </div>
-                <div id="resume-btn">
-                    <button id="english-btn" class="btn-red">English</button>
-                    <button id="hebrew-btn">Hebrew</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="show-case-anchor">
-        <div class="container">
-            <h1 class="horizontal-text">Show Case</h1>
-            <p class="section-description">You're Welcome to View My Latest Work</p>
-            <div id="show-case" class="content">
-                <button class="arrow" onclick="carouselMoveLeft()">
-                    <svg class="far fa-arrow-alt-circle-left"></svg>
-                </button>
-                <div class="carousel"></div>
-                <button class="arrow" onclick="carouselMoveRight()">
-                    <svg class="far fa-arrow-alt-circle-right"></svg>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact-anchor">
-        <div class="container">
-            <h1 class="horizontal-text">Contact Me</h1>
-            <div id="contact" class="content">
-                <div class="contact-icons">
-                    <a href="mailto: ido.galili@zoho.com">
-                        <svg class="fas fa-envelope-square"></svg>
-                        <p>ido.galili@zoho.com</p>
-                    </a>
-                </div>
-                <div class="contact-icons">
-                    <a href="https://github.com/ido-galili/" target="_blank">
-                        <svg class="fab fa-github-square"></svg>
-                        <p>ido-galili</p>
-                    </a>
-                </div>
-                <div class="contact-icons">
-                    <a href="https://www.linkedin.com/in/ido-galili-levin-825568b8" target="_blank">
-                        <svg class="fab fa-linkedin"></svg>
-                        <p>Ido Galili-Levin</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <!-- <footer></footer> -->
+        var app = new Vue({
+            el: '#app',
+            data: {
+                loading: true
+            },
+            created: function() {
+                setTimeout(() => {
+                    this.loading = false;
+            }, 1500);
+            }
+        });
+    </script>
 </body>
 
 </html>

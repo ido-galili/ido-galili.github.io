@@ -9,6 +9,8 @@
     --red: #eb4d4b;
     --yellow: #f6e58d;
     --green: #55efc4;
+    --delay-animation: 0.5s;
+    --fade-animation-time: 1.5s;
 }
 
 html {
@@ -284,14 +286,14 @@ section .horizontal-text {
     height: 20em;
     width: 20em;
     opacity: 0;
-    animation: 2.5s fade-in forwards;
+    animation: fade-in 1s linear forwards;
 }
 
 #about #image h1 {
     opacity: 0;
     font-size: 2em;
     font-weight: bold;
-    animation: 2s fade-in 2.5s forwards;
+    animation: fade-in var(--fade-animation-time) linear var(--delay-animation) forwards;
 }
 
 #landing {
@@ -302,14 +304,14 @@ section .horizontal-text {
     opacity: 0;
     font-size: 100px;
     color: var(--about-color);
-    animation: 2s fade-in 2.5s forwards;
+    animation: fade-in var(--fade-animation-time) linear var(--delay-animation) forwards;
 }
 
 #about p {
     opacity: 0;
     flex-basis: 50%;
     font-size: 2em;
-    animation: 2s fade-in 2.5s forwards;
+    animation: fade-in var(--fade-animation-time) linear var(--delay-animation) forwards;
     text-align: left;
     padding-left: 2em;
 }
@@ -317,7 +319,7 @@ section .horizontal-text {
 #about .vertical-rule {
     border-right: 10px solid var(--red);
     opacity: 0;
-    animation: 2s fade-in 2.5s forwards;
+    animation: fade-in var(--fade-animation-time) linear var(--delay-animation) forwards;
 }
 
 /* Skills */
@@ -548,6 +550,9 @@ body::-webkit-scrollbar-thumb {
 } */
 
 @keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
     100% {
         opacity: 1;
     }
